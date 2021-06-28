@@ -57,18 +57,18 @@ const dbPromise = requestForMain.then(({ data }) => {
   )
 
   const {
-    classRecords: preClassRecords,
-    characterClassRecords: preCharacterClassRecords,
+    preClassRecords,
+    preCharacterClassRecords,
   } = characterClasses?.reduce((
-      { classRecords, characterClassRecords },
+      { preClassRecords, preCharacterClassRecords },
       [name, classes]
     ) => ({
-      classRecords: [
-        ...classRecords,
+      preClassRecords: [
+        ...preClassRecords,
         ...classes,
       ],
-      characterClassRecords: [
-        ...characterClassRecords,
+      preCharacterClassRecords: [
+        ...preCharacterClassRecords,
         ...(!DEPRECATED_CHARACTERS.includes(name)
           ? classes.map(cls => ({
             class: cls,
@@ -79,8 +79,8 @@ const dbPromise = requestForMain.then(({ data }) => {
       ]
     }),
     {
-      classRecords: [],
-      characterClassRecords: []
+      preClassRecords: [],
+      preCharacterClassRecords: []
     }
   )
 
