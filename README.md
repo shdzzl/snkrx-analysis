@@ -95,7 +95,7 @@ const dbPromise = requestForMain.then(({ data }) => {
 })
 ```
 
-Let's see how which characters belong in each class
+Let's see which characters belong in each class
 
 ```js repl--
 import fs from 'fs'
