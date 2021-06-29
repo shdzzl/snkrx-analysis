@@ -1,6 +1,12 @@
 # SNKRX Analysis
 
-## 
+## Requirements
+
+TODO
+
+## How to run this file
+
+TODO
 
 ## Analysis
 
